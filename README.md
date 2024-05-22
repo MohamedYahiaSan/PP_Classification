@@ -1,8 +1,9 @@
 # Devices Price Classification System
+Mobile Phone Price Category Classification Model with SVM and a Flask App to Create API Endpoints.
 
 ## Project Description
 
-The Devices Price Classification System is an AI-based application that predicts the price range of mobile devices based on their specifications. The system comprises a Python project that includes data exploration, model training, and a Flask API to serve predictions.
+The Devices Price Classification System is an AI-based application that predicts the price range of mobile devices based on their specifications. The system comprises a Python project with data exploration, model training, and a Flask API to serve predictions.
 
 ## Features
 
