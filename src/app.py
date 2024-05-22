@@ -7,7 +7,7 @@ import sqlite3
 app=Flask(__name__)
 
 # Connect to SQLite database (or create it if it doesn't exist)
-conn = sqlite3.connect('Machine_Learning/PP_Classification/src/devices.db')
+conn = sqlite3.connect('src/devices.db')
 
 # Create a cursor object using the cursor() method
 cursor = conn.cursor()
@@ -47,7 +47,7 @@ conn.commit()
 conn.close()
 
 # Our Database file
-DATABASE='Machine_Learning/PP_Classification/src/devices.db'
+DATABASE='src/devices.db'
 
 # Function to get a database connection
 def get_db_connection():

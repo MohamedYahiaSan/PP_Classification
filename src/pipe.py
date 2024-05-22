@@ -6,7 +6,7 @@ import os
 # Get the current working directory
 here=os.getcwd()
 # Define the path to the directory containing the model and scaler
-path=os.path.join(here,'Machine_Learning/PP_Classification/src')
+path=os.path.join(here,'src')
 
 # Load the trained SVM model
 loaded_model = load(os.path.join(path,'svm_model.joblib'))

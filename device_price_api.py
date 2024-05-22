@@ -83,7 +83,7 @@ BASE_URL = "http://localhost:5000/api"
 
 
 # Reading test file to test 10 samples 
-test=pd.read_excel('Machine_Learning/PP_Classification/src/test.xlsx')
+test=pd.read_excel('src/test.xlsx')
 
 # Checking our data
 all_data(BASE_URL)

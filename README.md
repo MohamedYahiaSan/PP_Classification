@@ -23,7 +23,9 @@ PP_Classification/
 │   ├── devices.db                             # SQLite database for storing devices
 │   ├── scaler.joblib                          # Saved scaler for normalization
 │   └── svm_model.joblib                       # Saved SVM model
-└── device_price_api.py                        # Script to test and run 10 test samples
+├── device_price_api.py                        # Script to test and run 10 test samples
+├── README.md                                  # Readme file of the project 
+└── requirements.txt                           # Required libs
 ```
 
 ## Installation
@@ -32,11 +34,11 @@ PP_Classification/
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/MohamedYahiaSan/Learning/tree/Study/Machine_Learning/PP_Classification.git
+    git clone https://github.com/MohamedYahiaSan/PP_Classification.git
     ```
-2. Navigate to the project directory:
+2. Navigate to the project directory (Make sure to adjust the line):
     ```sh
-    cd devices-price-classification/PP_Classification
+    cd ../PP_Classification
     ```
 3. Install the required packages:
     ```sh
@@ -60,16 +62,25 @@ PP_Classification/
 3. The following endpoints are available:
 
 - **Retrieve a list of all devices**:
+    Endpoint: `POST /api/devices/`
+    Expected Return: Returns a JSON array containing details of all devices stored in the database.
+
     ```sh
     curl -X POST http://localhost:5000/api/devices/
     ```
 
 - **Retrieve details of a specific device by ID**:
+    Endpoint: `GET /api/devices/{id}`
+    Expected Return: Returns details of the device with the specified ID in JSON format. If the device is not found, returns a 404 error.
+
     ```sh
     curl http://localhost:5000/api/devices/{id}
     ```
 
 - **Add a new device**:
+    Endpoint: `POST /api/devices`
+    Expected Return: Returns a success message in JSON format if the device is added successfully. If any required fields are missing in the request body, returns a 400 error.
+
     ```sh
     curl -X POST -H "Content-Type: application/json" -d '{
         "battery_power": 500,
@@ -96,6 +107,8 @@ PP_Classification/
     ```
 
 - **Predict the price for a device by ID and update the database**:
+    Endpoint: `POST /api/predict/{id}`
+    Expected Return: Returns the predicted price for the device with the specified ID in JSON format. If the device is not found, returns a 404 error
     ```sh
     curl -X POST http://localhost:5000/api/predict/{id}
     ```
