@@ -1,0 +1,9 @@
+flask==2.0.3
+numpy==1.21.4
+pandas==1.3.4
+scikit-learn==0.24.2
+joblib==1.1.0
+requests==2.26.0
+xlrd==2.0.1
+threading==0.1.3
+sqlite==3.36.0
